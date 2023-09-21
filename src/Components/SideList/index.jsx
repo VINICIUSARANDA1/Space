@@ -5,6 +5,7 @@ import ItemNavigation from "./ItemNavigation";
 
 
 
+
 const StylizedSideList = styled.ul`
   list-style: none;
   padding: 0;
@@ -27,6 +28,24 @@ export default function SideList() {
               IconActive="/icones/mais-vistas-ativo.png"
               IconInactive="/icones/mais-vistas-inativo.png"
             > Mais vistos
+            </ItemNavigation>
+
+            <ItemNavigation
+              IconActive="/icones/mais-curtidas-ativo.png"
+              IconInactive="/icones/mais-curtidas-inativo.png"
+            > Mais Curtidas
+            </ItemNavigation>
+
+            <ItemNavigation
+              IconActive="/icones/novas-ativo.png"
+              IconInactive="/icones/novas-inativo.png"
+            > Novas
+            </ItemNavigation>
+
+            <ItemNavigation
+              IconActive="/icones/surpreenda-me-ativo.png"
+              IconInactive="/icones/surpreenda-me-inativo.png"
+            > Supreenda-me
             </ItemNavigation>
         </StylizedSideList>
       </nav>
