@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import backgroundImage from '../../assets/banner.png'
+
 
 
 const StaticBanner = styled.figure`
@@ -13,9 +13,9 @@ const StaticBanner = styled.figure`
     margin: 0;
     border-radius: 20px;
     max-width: 100%;
-      /* Sozinho */
-    margin-left: 24em;
-    margin-top: -20em
+    background-size: cover;
+    
+
 `
 
 const TextBanner = styled.h1`
@@ -27,7 +27,7 @@ const TextBanner = styled.h1`
     padding: 0 64px;
 `
 
-export default function Banner({text}) {
+export default function Banner({text,backgroundImage}) {
   return (
     <StaticBanner $backgroundImage={backgroundImage}>
         <TextBanner>{text}</TextBanner>
