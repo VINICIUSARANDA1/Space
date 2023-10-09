@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ButtonIcons from "../../ButtonIcons";
 
 const Figure = styled.figure`
-  width: ${(props) => (props.$expandida ? "90%" : "460px")};
+  width: ${props => props.$expandida ? "90%" : "460px"};
   max-width: 100%;
   margin: 0;
   display: flex;
@@ -11,6 +11,7 @@ const Figure = styled.figure`
   & > img {
     max-width: 100%;
     border-radius: 20px 20px 0 0;
+    
   }
   figcaption {
     background-color: #001634;
@@ -36,7 +37,8 @@ const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+`
+
 export default function ImageGallery({ photo, expandida = false }) {
   return (
     <Figure $expandida={expandida} id={`foto-${photo.id}`}>
@@ -50,11 +52,11 @@ export default function ImageGallery({ photo, expandida = false }) {
           </ButtonIcons>
           {!expandida && 
             <ButtonIcons arial-hidden={expandida}>
-              <img src="/Icones/expandir.png" alt="Icone de expandir" />
+              <img src="/icones/expandir.png" alt="Icone de expandir" />
             </ButtonIcons>
           }
         </Footer>
       </figcaption>
     </Figure>
-  );
+  )
 }

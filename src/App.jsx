@@ -8,6 +8,7 @@ import Gallery from "./Components/Gallery";
 
 import photos from "./photos.json"
 import { useState } from "react";
+import ModalZoom from "./Components/ModalZoom";
 
 const FundoGradiente = styled.div`
   background: linear-gradient(
@@ -16,9 +17,8 @@ const FundoGradiente = styled.div`
     #04244f 48%,
     #154580 96.76%
   );
-
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const AppContainer = styled.div`
@@ -56,6 +56,7 @@ function App() {
         </GalleryContent>
         </MainContainer>
       </AppContainer>
+      <ModalZoom/>
     </FundoGradiente>
   );
 }
