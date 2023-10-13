@@ -39,7 +39,7 @@ const Footer = styled.footer`
   align-items: center;
 `
 
-export default function ImageGallery({ photo, expandida = false }) {
+export default function ImageGallery({ photo, expandida=false, onRequestedZoom }) {
   return (
     <Figure $expandida={expandida} id={`foto-${photo.id}`}>
       <img src={photo.path} alt={photo.alt} />
@@ -51,7 +51,7 @@ export default function ImageGallery({ photo, expandida = false }) {
             <img src="/icones/favorito.png" alt="Icone Favorito" />
           </ButtonIcons>
           {!expandida && 
-            <ButtonIcons arial-hidden={expandida}>
+            <ButtonIcons arial-hidden={expandida} onClick={()=> onRequestedZoom(photo) }>
               <img src="/icones/expandir.png" alt="Icone de expandir" />
             </ButtonIcons>
           }
